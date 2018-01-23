@@ -1,9 +1,10 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var port  = process.env.PORT || 3000;
 
-app.listen(4000,function(){
-    console.log("localhost 4000 server start");
+app.listen(port,function(){
+    console.log("localhost "+port+" server start");
 });
 app.use(function(req,res,next){
     // Website you wish to allow to connect
